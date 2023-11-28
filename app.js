@@ -156,9 +156,18 @@ function findItalianFood(allDishes) {
 }
 
 function searchCuisines(allDishes) {
+    let userInput = prompt("Please enter a cuisine to search by: ")
     alert("Searching for dishes by cuisine...")
+   let results = allDishes.filter(function (el) {
+    if (el.cuisine === userInput ) {
+        return true;
+    } else {
+        return false;
+    }
+   });
     // TODO #3: Gather user input for a cuisine to search for, then filter for all dishes matching this cuisine type
     alert("Found all dishes matching the cuisine search term!  Check the console for full output")
+    return results
 }
 
 function searchIngredients(allDishes) {
