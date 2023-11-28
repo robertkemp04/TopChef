@@ -229,6 +229,10 @@ function textMessage(dishOfTheDay) {
     Today's Dish of the day is:
 
     <DISH OF THE DAY HERE>
+    `
+    dishOfTheDay = todaysSpecialDish.cuisine + todaysSpecialDish.name
+    console.log (dishOfTheDay)
+    `
 
     We hope to see you in soon!
 
@@ -295,10 +299,14 @@ function runApp(allDishes, specialDish) {
         case "6":
             // TODO #8: Call the appropriate function to generate the marketing text message.  
             // You will need to provide today's dish and the appropriate callback function as arguments!
+            let textAd = textMessage(dishOfTheDay)
+            console.log(textAd)
             break
         case "7":
             // TODO #9: Call the appropriate function to generate the marketing email message.  
             // You will need to provide today's dish and the appropriate callback function as arguments!
+            let emailAd = emailMessage(dishOfTheDay)
+            console.log(emailAd)
             break
         case "Exit":
             alert("Thank you for using the Recipe Searching Application!  Goodbye!")
